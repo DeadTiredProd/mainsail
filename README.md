@@ -100,7 +100,6 @@ every day. To motivate him (☕🍺😜) there are several ways to support him:
 [![patreon](https://img.shields.io/badge/patreon-participate-yellow.svg?style=flat-square)](https://www.patreon.com/meteyou)
 [![kofi](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg?style=flat-square)](https://ko-fi.com/mainsail)
 
-## Contributing<img width="780" height="727" alt="Screenshot 2026-05-17 142937" src="https://github.com/user-attachments/assets/402060e4-8b37-4720-ac35-29ed34624ef0" />
 
 
 Contributions to Mainsail are always welcome!
