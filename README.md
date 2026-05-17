@@ -100,7 +100,8 @@ every day. To motivate him (☕🍺😜) there are several ways to support him:
 [![patreon](https://img.shields.io/badge/patreon-participate-yellow.svg?style=flat-square)](https://www.patreon.com/meteyou)
 [![kofi](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg?style=flat-square)](https://ko-fi.com/mainsail)
 
-## Contributing
+## Contributing<img width="780" height="727" alt="Screenshot 2026-05-17 142937" src="https://github.com/user-attachments/assets/402060e4-8b37-4720-ac35-29ed34624ef0" />
+
 
 Contributions to Mainsail are always welcome!
 
@@ -129,4 +130,4 @@ possible.
 #Forked Additions 
 
 Bed Tramming Helper 
-https://cdn.discordapp.com/attachments/1232995284238209024/1505637906880921810/Screenshot_2026-05-17_142703.png?ex=6a0b5a12&is=6a0a0892&hm=0da475343d87165c1f7b2c6d0cc86bf2197a90ade285e44815f135d18880c54a&
+<img width="780" height="727" alt="Screenshot 2026-05-17 142937" src="https://github.com/user-attachments/assets/ac899b79-a553-4201-88f9-2df68d82b6bc" />
