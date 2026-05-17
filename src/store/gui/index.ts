@@ -98,6 +98,7 @@ export const getDefaultState = (): GuiState => {
                 { name: 'macros', visible: true },
                 { name: 'machine-settings', visible: true },
                 { name: 'miscellaneous', visible: true },
+				{ name: 'FilamentRunout', visible: true },
             ],
             desktopLayout2: [
                 { name: 'temperature', visible: true },

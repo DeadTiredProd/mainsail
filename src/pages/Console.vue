@@ -76,6 +76,7 @@
                 </v-card>
             </v-col>
         </v-row>
+		<FilamentRunoutDialog v-model="showFilamentDialog" />
     </div>
 </template>
 
@@ -88,11 +89,14 @@ import { mdiCog, mdiTrashCan } from '@mdi/js'
 import ConsoleMixin from '@/components/mixins/console'
 import ConsoleTextarea from '@/components/inputs/ConsoleTextarea.vue'
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
+import FilamentRunoutDialog from '@/components/dialogs/FilamentRunoutDialog.vue'
+import { filamentBus } from '@/bus/filamentBus'
 
 @Component({
     components: {
         CommandHelpModal,
         ConsoleTable,
+		FilamentRunoutDialog,
     },
 })
 export default class PageConsole extends Mixins(BaseMixin, ConsoleMixin) {
@@ -136,6 +140,17 @@ export default class PageConsole extends Mixins(BaseMixin, ConsoleMixin) {
             overlayscroll?.scroll({ y: '100%' })
         })
     }
+	showFilamentDialog = false
+	
+	mounted() {
+    filamentBus.$on('show-filament-dialog', () => {
+        this.showFilamentDialog = true
+    })
+
+    filamentBus.$on('hide-filament-dialog', () => {
+        this.showFilamentDialog = false
+    })
+}
 }
 </script>
 

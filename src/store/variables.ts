@@ -120,6 +120,7 @@ export const allDashboardPanels = [
     'mmu',
     'temperature',
     'webcam',
+	'FilamentRunout',
 ]
 
 export const thumbnailSmallMin = 30

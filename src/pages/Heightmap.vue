@@ -25,6 +25,7 @@
                 </v-col>
             </template>
         </v-row>
+		<FilamentRunoutDialog v-model="showFilamentDialog" />
     </div>
 </template>
 <script lang="ts">
@@ -33,11 +34,23 @@ import BaseMixin from '@/components/mixins/base'
 
 import Panel from '@/components/ui/Panel.vue'
 import { mdiLockOutline } from '@mdi/js'
-
+import FilamentRunoutDialog from '@/components/dialogs/FilamentRunoutDialog.vue'
+import { filamentBus } from '@/bus/filamentBus'
 @Component({
-    components: { Panel },
+    components: { Panel },FilamentRunoutDialog,
 })
 export default class PageHeightmap extends Mixins(BaseMixin) {
     mdiLockOutline = mdiLockOutline
+showFilamentDialog = false
+	
+	mounted() {
+    filamentBus.$on('show-filament-dialog', () => {
+        this.showFilamentDialog = true
+    })
+
+    filamentBus.$on('hide-filament-dialog', () => {
+        this.showFilamentDialog = false
+    })
+}
 }
 </script>

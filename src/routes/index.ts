@@ -6,6 +6,8 @@ import Files from '../pages/Files.vue'
 import History from '../pages/History.vue'
 import Timelapse from '../pages/Timelapse.vue'
 import Machine from '../pages/Machine.vue'
+import FilamentSensor from '../pages/FilamentSensor.vue'
+import BedTramming from '@/pages/BedTramming.vue'
 import { AsyncComponent, Component } from 'vue'
 
 import {
@@ -126,6 +128,26 @@ const routes: AppRoute[] = [
         alwaysShow: true,
         showInNavi: true,
         position: 90,
+    },
+	{
+        name: 'filamentSensor',
+        title: "Filament Sensor",
+        icon: mdiWrench,
+        path: '/filamentSensor',
+        component: FilamentSensor,
+        alwaysShow: true,
+        showInNavi: true,
+        position: 91,
+    },
+    {
+        name: 'bedTramming',
+        title: 'Bed Tramming',
+        path: '/bedTramming',
+        icon: mdiGrid,
+        component: BedTramming,
+        alwaysShow: true,
+        showInNavi: true,
+        position: 92,
     },
     {
         title: null,

@@ -10,6 +10,7 @@
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
             </v-col>
+			
         </v-row>
         <v-row v-else-if="isTablet">
             <v-col class="col-6">
@@ -76,7 +77,9 @@
                 </template>
             </v-col>
         </v-row>
+		<FilamentRunoutDialog v-model="showFilamentDialog" />
     </div>
+	
 </template>
 
 <script lang="ts">
@@ -99,10 +102,15 @@ import StatusPanel from '@/components/panels/StatusPanel.vue'
 import ToolheadControlPanel from '@/components/panels/ToolheadControlPanel.vue'
 import TemperaturePanel from '@/components/panels/TemperaturePanel.vue'
 import WebcamPanel from '@/components/panels/WebcamPanel.vue'
+import FilamentRunoutDialog from '@/components/dialogs/FilamentRunoutDialog.vue'
+import { filamentBus } from '@/bus/filamentBus'
+import FilamentRunoutPanel from '@/components/panels/FilamentRunoutPanel.vue'
 
 @Component({
     components: {
         AfcPanel,
+		FilamentRunoutDialog,
+		FilamentRunoutPanel,
         ExtruderControlPanel,
         KlippyStatePanel,
         LedEffectsPanel,
@@ -154,11 +162,21 @@ export default class PageDashboard extends Mixins(DashboardMixin) {
     }
 
     extractPanelName(name: string) {
-        return name.split('_')[0] + '-panel'
-    }
-
+    return name.split('_')[0] + '-panel'
+	}
     extractPanelId(name: string) {
         return name.split('_')[1] ?? null
     }
+	showFilamentDialog = false
+	
+	mounted() {
+    filamentBus.$on('show-filament-dialog', () => {
+        this.showFilamentDialog = true
+    })
+
+    filamentBus.$on('hide-filament-dialog', () => {
+        this.showFilamentDialog = false
+    })
+}
 }
 </script>
